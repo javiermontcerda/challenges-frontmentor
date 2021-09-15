@@ -1,0 +1,141 @@
+:root {
+    --paleblue: hsl(225, 100%, 94%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--paleblue);
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #263053;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 450px;
+    min-width: 330px;
+    min-height: 570px;
+    max-height: 690px;
+    box-shadow: 5px 5px 15px rgb(181, 192, 241);
+    text-align: center;
+    background-color: #fff;
+    margin: 50px;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__container {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.card__title {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card__description {
+    line-height: 25px;
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--desaturated-blue);
+    transition: width 0.4s;
+}
+
+@media (max-width: 500px) {
+    .card__description {
+        width: 278px;
+    }
+}
+
+.card__select-plan {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px auto 25px;
+    transition: width 0.3s;
+}
+
+@media (max-width: 500px) {
+    .card__select-plan {
+        width: 278px;
+    }
+}
+
+.card__anual-block {
+    flex-grow: 1;
+    margin: 0 auto 0 10px;
+    text-align: left;
+}
+
+.card__title-plan {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.card__price {
+    color: var(--desaturated-blue);
+}
+.card__change {
+    align-self: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+.card__button {
+    height: 45px;
+    width: 320px;
+    border-radius: 10px;
+    border: 0px;
+    display: block;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition: width 0.3s;
+}
+
+@media (max-width: 500px) {
+    .card__button {
+        width: 278px;
+    }
+}
+
+.card__button--proceed {
+    background-color: hsl(245, 75%, 52%);
+    color: #fff;
+    box-shadow: 10px 10px 10px var(--paleblue);
+}
+
+.card__button--cancel {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+}
