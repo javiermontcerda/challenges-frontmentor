@@ -50,6 +50,17 @@ body {
     justify-content: space-between;
     color: var(--white);
     font-family: var(--font-primary);
+    transition: width 0.1s;
+}
+
+@media (max-width: 1110px) {
+    .card {
+        width: 326px;
+        height: 780px;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        transition: width 0.1s;
+    }
 }
 
 .card__accent {
@@ -63,22 +74,52 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+@media (max-width: 1110px) {
+    .card__info-block {
+        margin: 32px;
+    }
+}
+
 .card__title {
     font-size: 36px;
 }
+@media (max-width: 1110px) {
+    .card__title {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
 .card__paragraph {
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: 0.5px;
-    padding-top: 25px;
+    letter-spacing: 0.8px;
+    padding-top: 20px;
     flex-grow: 2;
     color: var(--slightly-transparent-white);
+}
+@media (max-width: 1110px) {
+    .card__paragraph {
+        text-align: center;
+        letter-spacing: 0.7px;
+
+        padding-bottom: 25px;
+    }
 }
 .card__stats {
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+}
+@media (max-width: 1110px) {
+    .card__stats {
+        flex-direction: column;
+        text-align: center;
+        height: 208px;
+        width: 100%;
+    }
 }
 
 .card__li-number {
@@ -88,7 +129,7 @@ body {
 }
 
 .card__li-title {
-    letter-spacing: 2px;
+    letter-spacing: 0.8px;
     font-size: 12px;
     font-weight: 400;
     font-family: var(--font-secundary);
@@ -96,5 +137,25 @@ body {
 }
 
 .card__image {
-    /* TODO: tintar imagen con un before y transparencia */
+    background-image: url("../images/image-header-desktop.jpg");
+    background-repeat: no-repeat;
+}
+
+.card__image:before {
+    content: "";
+    width: 540px;
+    height: 446px;
+    display: block;
+    position: relative;
+    background-color: hsl(277, 64%, 61%, 0.7);
+    filter: contrast(100%);
+}
+
+@media (max-width: 1110px) {
+    .card__image,
+    .card__image::before {
+        background-size: cover;
+        height: 240px;
+        width: 100%;
+    }
 }
