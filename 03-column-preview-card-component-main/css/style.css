@@ -59,37 +59,74 @@ body {
 @media (max-width: 924px) {
     .card {
         flex-direction: column;
-        width: 306px;
+        width: 326px;
         margin-top: 65px;
     }
 }
 
 .card__item {
-    width: 306px;
     height: 498px;
-    padding: 45px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 @media (max-width: 924px) {
     .card__item {
-        height: 320px;
-        width: 232px;
+        height: 442px;
     }
 }
 .card__icon {
-    margin: 2px;
+    /* margin: 3px 3px; */
+    width: 64px;
 }
 .card__title {
-    color: hsl(0, 0%, 100%);
-    margin-top: 30px;
+    color: var(--very-light-gray);
     font-family: var(--font-bold);
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
+    padding-top: 5px;
 }
+@media (max-width: 924px) {
+    .card__title {
+        padding: 32px 0;
+    }
+}
+
 .card__paragraph {
-    padding-top: 24px;
     color: var(--transparent-white);
     font-size: 14px;
     line-height: 25px;
     letter-spacing: 0.5px;
+    margin-bottom: 50px;
+    margin-top: -2px;
+}
+@media (max-width: 924px) {
+    .card__paragraph {
+        margin-bottom: 20px;
+    }
+}
+.card__button {
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    mix-blend-mode: screen;
+    cursor: pointer;
+    border: 2px solid var(--transparent-white);
+    border-radius: 50px;
+    width: 70%;
+    height: 48px;
+    transition: background-color 0.3s;
+}
+.card__button:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid var(--transparent-white);
+}
+@media (max-width: 924px) {
+    .card__button {
+        width: 64%;
+    }
 }
