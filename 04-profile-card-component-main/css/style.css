@@ -26,6 +26,9 @@ body {
 .bold {
     font-weight: 700;
 }
+.light {
+    font-weight: 400 !important;
+}
 .subtitle {
     font-weight: 400;
     color: var(--dark-grayish-blue);
@@ -37,9 +40,11 @@ body {
 .text-medium {
     font-size: 14px;
 }
+
 .text-large {
     font-size: 18px;
 }
+h2,
 .text-v-large {
     font-size: 20px;
 }
