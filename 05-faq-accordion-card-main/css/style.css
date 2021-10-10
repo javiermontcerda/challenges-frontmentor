@@ -36,9 +36,8 @@ li {
 }
 .card {
     margin: auto;
-    min-width: 920px;
-    min-height: 510px;
-    max-height: 510px;
+    min-width: 880px;
+    height: 510px;
     border-radius: 20px;
     background-color: var(--light);
 
@@ -58,7 +57,8 @@ li {
 }
 .card__box {
     position: relative;
-    top: -100px;
+    top: -235px;
+    right: 45px;
 }
 .card__title {
     padding-top: 75px;
@@ -78,14 +78,26 @@ li {
 }
 
 .card__item {
-    border-bottom: 1px solid var(--secondary);
-    margin: 0px 0px 10px 0px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    margin: 0px 0px 15px 0px;
 }
+
 .card__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 .card__question:hover {
     color: var(--primary);
+}
+.card__arrow {
+    position: relative;
+    height: 7px;
+    width: 10px;
+    transform: rotate(0deg);
+    transition: all 0.15s;
 }
 
 .card__answer {
@@ -94,10 +106,19 @@ li {
 
     cursor: none;
     display: none;
+    color: grey;
 }
 
-input[type="radio"]:checked ~ .card__question .card__answer {
+input[type="radio"]:checked ~ .card__answer {
     display: block;
+}
+
+input[type="radio"]:checked ~ .card__question .card__arrow {
+    transform: rotate(180deg);
+}
+
+input[type="radio"]:checked ~ .card__question p {
+    font-weight: 700;
 }
 
 input[type="radio"] {
